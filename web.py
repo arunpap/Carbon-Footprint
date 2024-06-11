@@ -14,8 +14,8 @@ app.config.update(
 	MAIL_SERVER='smtp.gmail.com',
 	MAIL_PORT=465,
 	MAIL_USE_SSL=True,
-	MAIL_USERNAME = 'appussrh@gmail.com',
-	MAIL_PASSWORD = 'wdpbxdfyoxfkpelk'
+	MAIL_USERNAME = 'arunpap28042003@gmail.com',
+	MAIL_PASSWORD = 'pvsrkvebvbxccjiu'
 	)
 
 app.config['MYSQL_USER'] = 'root'
@@ -240,8 +240,8 @@ def register():
             # send OTP mail
             mail_obj = SMTP('smtp.gmail.com', 587)
             mail_obj.starttls()
-            mail_obj.login('appussrh@gmail.com','wdpbxdfyoxfkpelk')
-            mail_obj.sendmail('appussrh@gmail.com', user_data['email'], message)
+            mail_obj.login('arunpap28042003@gmail.com','pvsrkvebvbxccjiu')
+            mail_obj.sendmail('arunpap28042003@gmail.com', user_data['email'], message)
 
             # render OTP page
             return render_template('otp.html')
@@ -392,9 +392,9 @@ def pledge():
         # c.execute("INSERT INTO per VALUES (%s)", (per,))
         writtn = [round(household,2), round(transport,2), round(waste,2),round(per,2)]
         maildata = [round(res,2), d]
-        emailid = "appussrh@gmail.com"
+        emailid = "arunpap28042003@gmail.com"
         msg = Message("Your Carbon Footprint Results !!",
-                      sender="appussrh@gmail.com",
+                      sender="arunpap28042003@gmail.com",
                       recipients=[emailid])
         msg.html = render_template('mailtest.html', data=maildata)
         mail.send(msg)

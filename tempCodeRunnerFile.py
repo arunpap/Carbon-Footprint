@@ -16,9 +16,9 @@ def pledge():
         # c.execute("INSERT INTO per VALUES (%s)", (per,))
         writtn = [round(household,2), round(transport,2), round(waste,2),round(per,2)]
         maildata = [round(res,2), d]
-        emailid = "appussrh@gmail.com"
+        emailid = "arunpap28042003@gmail.com"
         msg = Message("Your Carbon Footprint Results !!",
-                      sender="appussrh@gmail.com",
+                      sender="arunpap28042003@gmail.com",
                       recipients=[emailid])
         msg.html = render_template('mailtest.html', data=maildata)
         mail.send(msg)
